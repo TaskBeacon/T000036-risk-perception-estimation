@@ -1,0 +1,21 @@
+id: T000036
+slug: risk-perception-estimation
+title: Risk Perception Estimation Task
+acquisition: behavior
+variant: baseline
+cognitive_domain:
+  - risk-perception
+  - probability-judgment
+  - health-decision-making
+maturity: draft
+version:
+  release_tag: v0.1.0-dev
+contracts:
+  psyflow_taps: v0.1.0
+evidence:
+  - references/references.yaml
+  - references/references.md
+  - references/parameter_mapping.md
+  - references/stimulus_mapping.md
+  - references/task_logic_audit.md
+maintainer: []

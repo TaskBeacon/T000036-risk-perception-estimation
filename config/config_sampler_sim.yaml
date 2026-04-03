@@ -1,0 +1,176 @@
+subinfo_fields:
+  - name: subject_id
+    type: int
+    constraints:
+      min: 101
+      max: 999
+      digits: 3
+
+subinfo_mapping:
+  subject_id: 受试者编号（3位数字）
+  registration_failed: 注册失败
+  registration_successful: 注册成功
+  invalid_input: "字段 {field} 输入无效"
+
+window:
+  size: [1280, 720]
+  units: pix
+  screen: 0
+  bg_color: black
+  fullscreen: false
+  monitor_width_cm: 35.5
+  monitor_distance_cm: 60
+
+task:
+  task_name: risk_perception_estimation
+  save_path: ./outputs/sim_sampler
+  language: Chinese
+  voice_name: zh-CN-YunyangNeural
+  voice_enabled: false
+  total_blocks: 1
+  total_trials: 6
+  trial_per_block: 6
+  conditions:
+    - low_health_risk
+    - medium_health_risk
+    - high_health_risk
+  condition_weights: null
+  key_list: [1, 2, 3, 4, 5, 6, 7]
+  seed_mode: same_across_sub
+  overall_seed: 36036
+
+timing:
+  fixation_duration: 0.2
+  scenario_preview_duration: 0.25
+  response_window_duration: 0.4
+  iti_duration: 0.2
+
+stimuli:
+  instruction_text:
+    type: text
+    text: |
+      请根据每个情境的主观危险程度进行评分。
+      按 1-7 键作答：1 = 非常低，7 = 非常高。
+    color: white
+    height: 28
+    wrapWidth: 1020
+    font: SimHei
+
+  fixation:
+    type: text
+    text: "+"
+    color: white
+    height: 48
+    font: SimHei
+
+  scenario_low:
+    type: text
+    text: "你在空旷的户外散步，周围几乎没有其他人。"
+    color: white
+    height: 34
+    wrapWidth: 1020
+    pos: [0, 70]
+    font: SimHei
+
+  scenario_medium:
+    type: text
+    text: "你在通风良好的室内与少数人短暂停留。"
+    color: white
+    height: 34
+    wrapWidth: 1020
+    pos: [0, 70]
+    font: SimHei
+
+  scenario_high:
+    type: text
+    text: "你在拥挤的室内参加长时间聚会。"
+    color: white
+    height: 34
+    wrapWidth: 1020
+    pos: [0, 70]
+    font: SimHei
+
+  rating_prompt:
+    type: text
+    text: "你觉得这个情境有多危险？"
+    color: white
+    height: 30
+    wrapWidth: 1020
+    pos: [0, 0]
+    font: SimHei
+
+  rating_scale:
+    type: text
+    text: "1  非常低   2  较低   3  稍低   4  中等   5  稍高   6  高   7  非常高"
+    color: [0.85, 0.85, 0.85]
+    height: 24
+    wrapWidth: 1080
+    pos: [0, -140]
+    font: SimHei
+
+  block_break:
+    type: text
+    text: |
+      完成第 {block_num}/{total_blocks} 个区块
+      本区平均评分：{mean_rating:.2f}
+      本区平均反应时：{mean_rt:.3f} 秒
+
+      按空格继续。
+    color: white
+    height: 28
+    wrapWidth: 1020
+    font: SimHei
+
+  good_bye:
+    type: text
+    text: |
+      Sampler Sim 完成
+      总体平均评分：{mean_rating:.2f}
+      总体平均反应时：{mean_rt:.3f} 秒
+
+      按空格退出。
+    color: white
+    height: 30
+    wrapWidth: 1020
+    font: SimHei
+
+triggers:
+  map:
+    exp_onset: 1
+    exp_end: 2
+    block_onset: 10
+    block_end: 11
+    fixation_onset: 20
+    scenario_preview_onset: 30
+    rating_response_onset: 31
+    rating_response_key: 32
+    rating_response_timeout: 33
+    iti_onset: 40
+  driver:
+    type: serial_url
+    url: loop://
+    baudrate: 115200
+  timing:
+    post_delay_ms: 1
+  policy:
+    strict: false
+sim:
+  output_dir: outputs/sim_sampler
+  seed: 36036
+  participant_id: sim001
+  session_id: sub-sim001_task-risk_perception_estimation_sampler_seed36036
+  log_path: outputs/sim_sampler/sub-sim001_task-risk_perception_estimation_sampler_seed36036_sim_events.jsonl
+  policy: warn
+  default_rt_s: 0.28
+  clamp_rt: false
+  responder:
+    type: responders.task_sampler:TaskSamplerResponder
+    kwargs:
+      rating_key_map:
+        low_health_risk: "2"
+        medium_health_risk: "4"
+        high_health_risk: "6"
+      noise_sd: 0.45
+      rt_mean_s: 0.30
+      rt_sd_s: 0.06
+      rt_min_s: 0.12

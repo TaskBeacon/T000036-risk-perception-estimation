@@ -1,0 +1,87 @@
+[
+  {
+    "id": "W3016902371",
+    "title": "Using social and behavioural science to support COVID-19 pandemic response",
+    "authors": [],
+    "year": 2020,
+    "journal": "Nature Human Behaviour",
+    "doi_or_url": "https://doi.org/10.1038/s41562-020-0884-z",
+    "citation_count": 4998,
+    "is_high_impact": true,
+    "open_access": true,
+    "used_for": [
+      "task_context",
+      "risk_perception_context"
+    ],
+    "parameter_bindings": {},
+    "notes": "High-impact open-access contextual anchor for health-risk perception and protective-behavior judgments."
+  },
+  {
+    "id": "W2142604507",
+    "title": "Measuring Risk Literacy: The Berlin Numeracy Test",
+    "authors": [],
+    "year": 2012,
+    "journal": "Judgment and Decision Making",
+    "doi_or_url": "https://doi.org/10.1017/s1930297500001819",
+    "citation_count": 763,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "response_scale_design",
+      "probability_language"
+    ],
+    "parameter_bindings": {},
+    "notes": "Supports explicit numeric probability/risk judgment and scale comprehension."
+  },
+  {
+    "id": "W2121507569",
+    "title": "Smokers’ unrealistic optimism about their risk",
+    "authors": [],
+    "year": 2005,
+    "journal": "Tobacco Control",
+    "doi_or_url": "https://doi.org/10.1136/tc.2004.008375",
+    "citation_count": 460,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "health-risk_scenarios",
+      "risk_perception_context"
+    ],
+    "parameter_bindings": {},
+    "notes": "Health-risk judgment context with self-relevant optimism bias."
+  },
+  {
+    "id": "W2129528797",
+    "title": "When a Day Means More than a Year: Effects of Temporal Framing on Judgments of Health Risk",
+    "authors": [],
+    "year": 2004,
+    "journal": "Journal of Consumer Research",
+    "doi_or_url": "https://doi.org/10.1086/422116",
+    "citation_count": 433,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "temporal_framing",
+      "health-risk_judgment"
+    ],
+    "parameter_bindings": {},
+    "notes": "Supports temporal framing manipulations in perceived-health-risk judgments."
+  },
+  {
+    "id": "W2177211260",
+    "title": "Risk Perception and Risk-Taking Behaviour during Adolescence: The Influence of Personality and Gender",
+    "authors": [],
+    "year": 2016,
+    "journal": "PLoS ONE",
+    "doi_or_url": "https://doi.org/10.1371/journal.pone.0153842",
+    "citation_count": 253,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "risk_perception_context",
+      "participant_rating"
+    ],
+    "parameter_bindings": {},
+    "notes": "Supports subjective risk-perception ratings and individual-difference framing."
+  }
+]
