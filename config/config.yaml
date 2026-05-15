@@ -46,7 +46,7 @@ task:
     - medium_health_risk
     - high_health_risk
   condition_weights: null
-  key_list: [1, 2, 3, 4, 5, 6, 7]
+  key_list: ["1", "2", "3", "4", "5", "6", "7"]
   seed_mode: same_across_sub
   overall_seed: 36036
 
