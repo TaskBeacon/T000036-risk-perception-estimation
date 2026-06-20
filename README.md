@@ -21,6 +21,8 @@ The runtime is split into human, QA, and simulation modes. Participant-facing wo
 
 ## 2. Task Flow
 
+![Task Flow](task_flow.png)
+
 ### Block-Level Flow
 
 | Step | Description |
